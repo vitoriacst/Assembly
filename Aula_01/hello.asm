@@ -22,3 +22,4 @@ _start:
 ;; linkeditar - pegar um progama em ling de maquina  e transformar para um executavel
 ;; ld -s -o hello hello.o
 
+
