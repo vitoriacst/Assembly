@@ -30,14 +30,14 @@ section .text
 
 global _start
  _start:
- // saida
+ ; saida
   mov EAX, SYS_WRITE
   mov EDX , STD_OUT
   mov ECX , msg
   mov EDX , tam
   int SYS_CALL
 
-// entrada
+; entrada
   mov EAX, SYS_READ
   mov EDX , STD_IN
   mov ECX , nome

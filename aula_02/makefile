@@ -1,7 +1,7 @@
 NOME = entradas
 
 all: ${NOME}.o
-	ld -s -0 ${NOME} ${NOME}.O
-
+		ld -s -o ${NOME} ${NOME}.o
+		rm -rf *.o;
 %.o: %.asm
-	nasm -f elf64 $<
+		nasm -f elf64 $<
