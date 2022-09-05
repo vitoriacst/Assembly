@@ -16,3 +16,6 @@ segment .data
   STD_OUT equ 0x1 ; saida padrao
 
 section .data
+  msg db "Entre com o seu nome" , LF , NULL
+  tam equ $- msg
+
