@@ -16,6 +16,11 @@ segment .data
   STD_OUT equ 0x1 ; saida padrao
 
 section .data
+;; algo constante
   msg db "Entre com o seu nome" , LF , NULL
   tam equ $- msg
 
+section .bss
+;; algo variavel
+  nome resb 1
+  ;; valores em byte en byte
