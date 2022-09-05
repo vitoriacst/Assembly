@@ -14,6 +14,7 @@ segment .data
   RET_EXIT equ 0x0 ; op realizada com sucesso
   STD_IN equ 0x0 ; entrada padrao
   STD_OUT equ 0x1 ; saida padrao
+  STD_SIZE equ 0xA
 
 section .data
 ;; algo constante
@@ -24,3 +25,25 @@ section .bss
 ;; algo variavel
   nome resb 1
   ;; valores em byte en byte
+
+section .text
+
+global _start
+ _start:
+ // saida
+  mov EAX, SYS_WRITE
+  mov EDX , STD_OUT
+  mov ECX , msg
+  mov EDX , tam
+  int SYS_CALL
+
+// entrada
+  mov EAX, SYS_READ
+  mov EDX , STD_IN
+  mov ECX , nome
+  mov EDX , STD_SIZE
+  int SYS_CALL
+
+  mov EAX , SYS_EXIT
+  mov EBX , RET_EXIT
+  int SYS_CALL
