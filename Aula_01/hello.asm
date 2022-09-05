@@ -15,6 +15,7 @@ _start:
     mov EDX, tam
     int 0x80
     ; destino , origem EAX = 1
+    saida:
     mov EAX, 0x1 ; -> terminando programa
     mov EBX, 0x0 ;valor de retorno padrao -> o valor de retorno e 0
     int 0x80 ; -> faz com que execute todas as mov
